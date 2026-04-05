@@ -1,0 +1,38 @@
+# Ignore everything by default (secrets, caches, logs, sessions)
+*
+
+# Track git and repo meta
+!.gitignore
+!README.md
+
+# Global instructions (loaded every session)
+!CLAUDE.md
+
+# Custom slash commands (/user:name)
+!commands/
+!commands/**
+
+# Reusable prompt workflows
+!skills/
+!skills/**
+
+# Topic-scoped instructions
+!rules/
+!rules/**
+
+# Subagent definitions
+!agents/
+!agents/**
+
+# Custom output styles
+!output-styles/
+!output-styles/**
+
+# Sanitized settings template
+!settings.json.example
+
+# Never track secrets even if explicitly added
+settings.json
+settings.json.lock
+backups/
+certs/
