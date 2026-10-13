@@ -1,15 +1,9 @@
 {
   "env": {
-    "ANTHROPIC_AUTH_TOKEN": "<your-token>",
-    "ANTHROPIC_BEDROCK_BASE_URL": "<your-bedrock-url>",
-    "CLAUDE_CODE_SKIP_BEDROCK_AUTH": "1",
-    "CLAUDE_CODE_USE_BEDROCK": "1",
     "DISABLE_AUTOUPDATER": "0",
     "DISABLE_BUG_COMMAND": "1",
     "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_TELEMETRY": "1",
-    "NODE_EXTRA_CA_CERTS": "<path-to-ca-bundle>",
-    "NODE_TLS_REJECT_UNAUTHORIZED": "1"
+    "DISABLE_TELEMETRY": "1"
   },
   "permissions": {
     "allow": [
@@ -104,31 +98,6 @@
     ],
     "defaultMode": "plan",
     "disableBypassPermissionsMode": "disable"
-  },
-  "model": "us.anthropic.claude-opus-4-6-v1",
-  "hooks": {
-    "PostToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "<your-hook-script>"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "<your-hook-script>"
-          }
-        ]
-      }
-    ]
   },
   "autoUpdatesChannel": "latest",
   "effortLevel": "medium"
